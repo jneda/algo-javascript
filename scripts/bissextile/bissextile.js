@@ -1,6 +1,7 @@
 /*
 Consigne : écrire un programme qui détermine si l'année donnée en entrée
 est bissextile ou non.
+Contrainte : on n'a pas encore vu comment utiliser des fonctions.
 
 La règle actuelle :
 Depuis l'ajustement du calendrier grégorien, l'année est bissextile (comportant 366 jours)1 seulement si elle respecte l’un des deux critères suivants :
@@ -30,6 +31,7 @@ if (
 }
  */
 
+/* 
 // V2 : on utilise des variables booléennes.
 const estMultipleDe4 = annee % 4 === 0;
 const estMultipleDe100 = annee % 100 === 0;
@@ -44,9 +46,10 @@ if (
 } else {
   message += "non bissextile.";
 }
+ */
 
 /* 
-// V3: on teste d'abord si l'année n'est pas bissextile.
+// V3 : on teste d'abord si l'année n'est pas bissextile.
 const estMultipleDe4 = annee % 4 === 0;
 const estMultipleDe100 = annee % 100 === 0;
 const estMultipleDe400 = annee % 400 === 0;
@@ -59,7 +62,22 @@ if (! // Si PAS
   message += "non ";
 }
 message += "bissextile.";
- */
+*/
+
+// V4 : on rajoute une variable booléenne dans l'espoir de rendre
+// le code plus lisible.
+
+const estMultipleDe4 = annee % 4 === 0;
+const estMultipleDe100 = annee % 100 === 0;
+const estMultipleDe400 = annee % 400 === 0;
+
+const estBissextile = (estMultipleDe4 && !estMultipleDe100) || estMultipleDe400;
+
+if (!estBissextile) {
+  message += "non ";
+}
+message += "bissextile.";
+
 
 // On affiche le résultat.
 document.write("<p>" + message + "</p>");
