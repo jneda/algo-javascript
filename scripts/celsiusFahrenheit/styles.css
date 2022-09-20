@@ -1,0 +1,45 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+#wrapper {    
+    align-items: center;
+}
+
+#calculator {
+    width: 30%;
+    background-color: lightgreen;
+    padding: 2em;
+    border-radius: .5em;
+}
+
+input,
+button {
+    padding: 0.4em;
+    border-radius: .5em;
+    border: none;
+}
+
+button {
+    margin-top: 1em;
+    text-transform: uppercase;
+    background-color: green;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.377);
+}
+
+button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+span {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
+}

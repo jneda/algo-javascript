@@ -17,67 +17,17 @@ const annee = Number(prompt("Saisir une année :"));
 // On stocke la partie invariable du message dans une variable.
 let message = "L'année " + annee + " est ";
 
-/* 
-// V1 : les expressions sont dans la condition.
+// V5 : on fait sans les variable estMultipleDe
 
-if (
-  (annee % 4 === 0 && // Multiple de 4
-    !(annee % 100 === 0)) || // 4 ET pas de 100 ?
-  annee % 400 === 0 // OU multiple de 400 ?
-) {
-  message += "bissextile.";
-} else {
-  message += "non bissextile.";
-}
- */
+const condition1 = annee % 4 === 0 && !annee % 100 === 0;
+const condition2 = annee % 400 === 0;
 
-/* 
-// V2 : on utilise des variables booléennes.
-const estMultipleDe4 = annee % 4 === 0;
-const estMultipleDe100 = annee % 100 === 0;
-const estMultipleDe400 = annee % 400 === 0;
-
-if (
-  (estMultipleDe4 && // Multiple de 4
-    !estMultipleDe100) || // 4 ET pas de 100 ?
-  estMultipleDe400 // OU multiple de 400 ?
-) {
-  message += "bissextile.";
-} else {
-  message += "non bissextile.";
-}
- */
-
-/* 
-// V3 : on teste d'abord si l'année n'est pas bissextile.
-const estMultipleDe4 = annee % 4 === 0;
-const estMultipleDe100 = annee % 100 === 0;
-const estMultipleDe400 = annee % 400 === 0;
-
-if (! // Si PAS
-  (estMultipleDe4 && // Multiple de 4
-    !estMultipleDe100) || // 4 ET pas de 100 ?
-    estMultipleDe400 // OU multiple de 400 ?
-) {
-  message += "non ";
-}
-message += "bissextile.";
-*/
-
-// V4 : on rajoute une variable booléenne dans l'espoir de rendre
-// le code plus lisible.
-
-const estMultipleDe4 = annee % 4 === 0;
-const estMultipleDe100 = annee % 100 === 0;
-const estMultipleDe400 = annee % 400 === 0;
-
-const estBissextile = (estMultipleDe4 && !estMultipleDe100) || estMultipleDe400;
+const estBissextile = condition1 || condition2;
 
 if (!estBissextile) {
   message += "non ";
 }
 message += "bissextile.";
-
 
 // On affiche le résultat.
 document.write("<p>" + message + "</p>");
