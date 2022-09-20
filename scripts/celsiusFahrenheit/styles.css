@@ -1,5 +1,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eee;
 }
 
 .flex-column {
@@ -42,4 +43,13 @@ span {
   text-align: center;
   font-size: 1.6em;
   font-weight: bold;
+}
+
+@media screen and (max-width: 380px) {
+  h1 {
+    text-align: center;
+  }
+  #calculator {
+    width: 75%;
+  }
 }
