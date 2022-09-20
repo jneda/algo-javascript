@@ -10,7 +10,7 @@ if (chaine.length > 1) {
   const cars = chaine.split(""); // transformation de la chaîne en tableau de caractères
 
   // interversion de la première et de la dernière
-  let temp = cars[0];
+  const temp = cars[0];
   cars[0] = cars[cars.length - 1];
   cars[cars.length - 1] = temp;
 
