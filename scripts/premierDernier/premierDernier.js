@@ -16,5 +16,6 @@ if (chaine.length === 1) {
   let partieMilieu = chaine.slice(1, indexFin); // on copie les lettres de la deuxième à l'avant-dernière
 
   let chaineResultat = carFin.concat(partieMilieu, carDebut); // on concatène tout ça dans l'ordre souhaité
+  
   document.write(chaineResultat); // on affiche
 }
