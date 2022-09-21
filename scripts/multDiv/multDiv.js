@@ -12,6 +12,8 @@ const nb2 = Number(prompt("Donne-moi un second nombre"));
 
 // 3
 document.write("<p>Le produit de " + nb1 + " et " + nb2 + " est = " + (nb1 * nb2) + "</p><p>");
+document.write(`<p>Le produit de ${nb1} et ${nb2} est = ${nb1 * nb2}</p><p>`);
+
 
 // 4
 if (nb2 === 0) {
