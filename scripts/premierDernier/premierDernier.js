@@ -14,6 +14,7 @@ if (chaine.length > 1) { // on ne rentre dans la boucle que si la chaîne est lo
   console.log("carFin :" + carFin);
 
 
+<<<<<<< HEAD
   const partieMilieu = chaine.slice(1, -1); // on copie les lettres de la deuxième à l'avant-dernière
   console.log("partieMilieu :" + partieMilieu);
   
@@ -22,3 +23,9 @@ if (chaine.length > 1) { // on ne rentre dans la boucle que si la chaîne est lo
 } 
 
 document.write(chaine); // on affiche
+=======
+  let chaineResultat = carFin.concat(partieMilieu, carDebut); // on concatène tout ça dans l'ordre souhaité
+  
+  document.write(chaineResultat); // on affiche
+}
+>>>>>>> e5fcce9e86c8078edf3f6f64ba11f0cba24d81a5
