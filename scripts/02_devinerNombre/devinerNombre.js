@@ -13,7 +13,8 @@ const randomNumber = Math.floor(Math.random() * 10) + 1;
 // 2. Saisir nbr en entrée
 const guess = Number(prompt("Donne-moi un nombre entre 1 et 10"));
 
-// 3 et 4
+// 3 et 4 : comparer nombre aléatoire et nombre utilisateur
+// afficher le résultat approprié
 if (guess === randomNumber) {
   document.write("Bon travail ;)");
 } else {

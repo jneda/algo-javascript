@@ -1,6 +1,8 @@
 /* 13/ Ecrivez un programme JavaScript pour trouver le plus grand des trois
 entiers donnés par l’utilisateur */
 
+// fonction de saisie par l'utilisateur
+
 function saisir() {
   // TODO : empêcher l'utilisateur de saisir n'importe quoi ;)
   const entiers = [];
@@ -15,6 +17,8 @@ function saisir() {
   return entiers;
 }
 
+// bonne vieille recherche du maximum
+
 function max(nombres) {
   let max = nombres[0];
 
@@ -28,10 +32,14 @@ function max(nombres) {
   return max;
 }
 
+// fonction principale
+
 function maxDe3() {
   const entiers = saisir();
   return max(entiers);
 }
+
+// test manuel
 
 while (true) {
   console.log(maxDe3());

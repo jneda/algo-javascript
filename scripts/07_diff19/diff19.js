@@ -8,6 +8,12 @@ const nombre = parseInt(prompt("Saisir un entier :"));
 
 if (nombre > 19) {
   document.write(`${nombre} - 19 = ${Math.abs(nombre - 19) * 3}`);
-} else {
+}
+
+// superflu selon l'énoncé
+
+/*
+else {
   document.write(`${nombre} < 19`);
 }
+*/

@@ -10,12 +10,12 @@ const nb1 = Number(prompt("Donne-moi un premier nombre"));
 const nb2 = Number(prompt("Donne-moi un second nombre"));
 // console.log(nb1, nb2);
 
-// 3
+// 3. afficher multiplication
 // document.write("<p>Le produit de " + nb1 + " et " + nb2 + " est = " + (nb1 * nb2) + "</p><p>");
 document.write(`<p>Le produit de ${nb1} et ${nb2} est = ${nb1 * nb2}</p><p>`);
 
 
-// 4
+// 4. afficher division
 if (nb2 === 0) {
   document.write("On ne peut pas diviser par zéro ^^</p>");
 } else {

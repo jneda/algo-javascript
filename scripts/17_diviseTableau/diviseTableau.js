@@ -10,6 +10,8 @@ function somme(tableau) {
   return tableau.reduce((a, b) => a + b);
 }
 
+// fonction principale
+
 function sommesSeparees(tableau) {
   if (tableau.length !== 10) {
     return;
