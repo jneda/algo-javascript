@@ -36,9 +36,11 @@ function estMultipleDe (n, diviseur) {
 }
 
 function estBissextile(annee) {
-  console.log(`${annee} / 4 ? ${estMultipleDe(annee, 4)} ` +
+  // debug
+  /* console.log(`${annee} / 4 ? ${estMultipleDe(annee, 4)} ` +
   `${annee} / 100 ? ${estMultipleDe(annee, 100)} ` + 
-  `${annee} / 400 ? ${estMultipleDe(annee, 400)}`);
+  `${annee} / 400 ? ${estMultipleDe(annee, 400)}`); */
+  
   return (estMultipleDe(annee, 4) && !estMultipleDe(annee, 100)) ||
   estMultipleDe(annee, 400)
 }
