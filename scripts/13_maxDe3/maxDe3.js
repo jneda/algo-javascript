@@ -22,12 +22,25 @@ function saisir() {
 function max(nombres) {
   let max = nombres[0];
 
+  
+  // boucle for classique
+
   for (let i = 1; i < nombres.length; i++) {
     let actuel = nombres[i];
     if (actuel > max) {
       max = actuel;
     }
   }
+ 
+  /* 
+  // boucle for ... of
+
+  for (const nombre of nombres) {
+    if (nombre > max) {
+      max = nombre;
+    }
+  }
+  */
 
   return max;
 }
