@@ -1,3 +1,5 @@
+// TODO :  gérer les arrondis (cf. 100 °F => 37,7777777777778 °C)
+
 // fonctions de calcul de la conversion
 
 function celsiusToFahrenheit() {
@@ -8,15 +10,10 @@ function fahrenheitToCelsisus() {
   return (celsius.value = ((fahrenheit.value - 32) * 5) / 9);
 }
 
-// utilitaires
+// utilitaire
 
 function isEmptyInput(inputElt) {
   return inputElt.value === "";
-}
-
-function setInputValue(inputElt, value) {
-  inputElt.value = value;
-  console.log(typeof value);
 }
 
 // fonction de gestion de l'état de l'application
@@ -28,9 +25,9 @@ function switchAppState() {
 
   if (waiting) {
     if (!isEmptyInput(celsius)) {
-      setInputValue(fahrenheit, celsiusToFahrenheit());
+      fahrenheit.value = celsiusToFahrenheit();
     } else if (!isEmptyInput(fahrenheit)) {
-      setInputValue(celsius, fahrenheitToCelsisus());
+      celsius.value = fahrenheitToCelsisus();
     }
 
     waiting = false;
@@ -43,7 +40,7 @@ const celsius = document.getElementById("celsius");
 const fahrenheit = document.getElementById("fahrenheit");
 const convertBtn = document.querySelector("input[type='button']");
 
-// variable d'état
+// initialisation variable d'état
 
 let waiting = true;
 
