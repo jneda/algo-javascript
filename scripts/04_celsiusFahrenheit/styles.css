@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #eee;
 }
 
@@ -19,15 +19,26 @@ body {
   padding: 2em;
 }
 
+input {
+  margin-top: 1em;
+  padding: 0.4em;
+  border: none;
+}
+
+input[type="button"] {
+  margin-top: 2.4em;
+  margin-bottom: 1.6em;
+}
+
 .labelled {
   display: flex;
   align-items: center;
 }
 
-input {
-  margin-top: 1em;
-  padding: 0.4em;
-  border: none;
+span {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
 }
 
 .labelled input {
@@ -35,13 +46,8 @@ input {
 }
 
 .labelled label {
-  margin-top: .6em;
-  padding-left: .6em;
-}
-
-input[type="button"] {
-  margin-top: 2.4em;
-  margin-bottom: 1.6em;
+  margin-top: 0.6em;
+  padding-left: 0.6em;
 }
 
 .btn {
@@ -52,12 +58,6 @@ input[type="button"] {
 .btn:hover {
   transform: scale(1.05);
   cursor: pointer;
-}
-
-span {
-  text-align: center;
-  font-size: 1.6em;
-  font-weight: bold;
 }
 
 @media screen and (max-width: 380px) {
