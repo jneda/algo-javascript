@@ -19,10 +19,24 @@ body {
   padding: 2em;
 }
 
+.labelled {
+  display: flex;
+  align-items: center;
+}
+
 input {
   margin-top: 1em;
   padding: 0.4em;
   border: none;
+}
+
+.labelled input {
+  flex: 2;
+}
+
+.labelled label {
+  margin-top: .6em;
+  padding-left: .6em;
 }
 
 input[type="button"] {

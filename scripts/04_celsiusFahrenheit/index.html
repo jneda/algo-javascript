@@ -13,9 +13,15 @@
   <div id="wrapper" class="flex-column">
     <h1>Convertisseur celsius vers fahrenheit</h1>
     <form id="calculator" class="flex-column">
-      <input type="number" id="celsius" placeholder="Degré °C" step="0.01">
+      <div class="labelled">
+        <input type="number" id="celsius" placeholder="Degré °C" step="0.01">
+        <label for="celsius">°C</label>
+      </div>
       <span>=</span>
-      <input type="number" id="fahrenheit" placeholder="Degré °F" step="0.01">
+      <div class="labelled">
+        <input type="number" id="fahrenheit" placeholder="Degré °F" step="0.01">
+        <label for="fahrenheit">°F</label>
+      </div>
       <input type="button" value="Convertir" class="btn">
       <input type="reset" value="Effacer" class="btn">
     </form>
