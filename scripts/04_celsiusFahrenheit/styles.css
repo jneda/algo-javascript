@@ -3,9 +3,21 @@ body {
   background-color: #eee;
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
+input {
+  margin-top: 1em;
+  padding: 0.4em;
+  border: none;
+}
+
+input[type="button"] {
+  margin-top: 2.4em;
+  margin-bottom: 1.6em;
+}
+
+span {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
 }
 
 #wrapper {
@@ -19,26 +31,14 @@ body {
   padding: 2em;
 }
 
-input {
-  margin-top: 1em;
-  padding: 0.4em;
-  border: none;
-}
-
-input[type="button"] {
-  margin-top: 2.4em;
-  margin-bottom: 1.6em;
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .labelled {
   display: flex;
   align-items: center;
-}
-
-span {
-  text-align: center;
-  font-size: 1.6em;
-  font-weight: bold;
 }
 
 .labelled input {
