@@ -14,7 +14,7 @@ body {
 
 #calculator {
   width: 30%;
-  max-width: 25em;
+  max-width: 13em;
   background-color: rgb(197, 238, 144);
   padding: 2em;
 }
@@ -26,7 +26,8 @@ input {
 }
 
 input[type="button"] {
-  margin-top: 2em;
+  margin-top: 2.4em;
+  margin-bottom: 1.6em;
 }
 
 .btn {
