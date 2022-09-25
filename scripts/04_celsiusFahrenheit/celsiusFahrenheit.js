@@ -1,5 +1,3 @@
-// TODO :  gérer les arrondis (cf. 100 °F => 37,7777777777778 °C)
-
 // fonctions de calcul de la conversion
 
 function celsiusToFahrenheit() {
@@ -24,10 +22,12 @@ function switchAppState() {
   }
 
   if (waiting) {
+    /* on utilise Number.prototype.toFixed() pour limiter l'affichage
+    du résultat à deux chiffres après la virgule */
     if (!isEmptyInput(celsius)) {
-      fahrenheit.value = celsiusToFahrenheit();
+      fahrenheit.value = celsiusToFahrenheit().toFixed(2);
     } else if (!isEmptyInput(fahrenheit)) {
-      celsius.value = fahrenheitToCelsisus();
+      celsius.value = fahrenheitToCelsisus().toFixed(2);
     }
 
     waiting = false;
