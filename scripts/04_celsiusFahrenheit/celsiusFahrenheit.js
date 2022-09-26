@@ -14,6 +14,16 @@ function isEmptyInput(inputElt) {
   return inputElt.value === "";
 }
 
+function isNumberValue(inputElt) {
+  const toNumber = parseFloat(inputElt.value);
+  return !isNaN(toNumber);
+}
+
+function isValidInput(inputElt) {
+  return isNumberValue &&
+   !isEmptyInput(inputElt);
+}
+
 // fonction de gestion de l'état de l'application
 
 function switchAppState() {
@@ -24,9 +34,9 @@ function switchAppState() {
   if (waiting) {
     /* on utilise Number.prototype.toFixed() pour limiter l'affichage
     du résultat à deux chiffres après la virgule */
-    if (!isEmptyInput(celsius)) {
+    if (isValidInput(celsius)) {
       fahrenheit.value = celsiusToFahrenheit().toFixed(2);
-    } else if (!isEmptyInput(fahrenheit)) {
+    } else if (isValidInput(fahrenheit)) {
       celsius.value = fahrenheitToCelsisus().toFixed(2);
     }
 
